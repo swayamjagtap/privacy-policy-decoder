@@ -141,3 +141,12 @@ dist
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
 .vite/
+
+# Local project audit / diagnostics
+repo-audit.txt
+
+# Local privacy-policy test corpus
+test-data/
+
+# Vercel local project metadata
+.vercel/

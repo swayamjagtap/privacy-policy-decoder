@@ -1,0 +1,471 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+
+  <meta
+    name="description"
+    content="Privacy Policy Decoder turns long privacy policies into a clear, evidence-based privacy snapshot."
+  />
+
+  <title>Privacy Policy Decoder</title>
+
+  <link
+    rel="stylesheet"
+    href="style.css"
+  />
+</head>
+
+<body>
+
+  <div class="app-shell">
+
+    <!-- =========================
+         HEADER
+    ========================== -->
+
+    <header class="site-header">
+      <a
+        class="brand"
+        href="/"
+        aria-label="Privacy Policy Decoder home"
+      >
+        <span class="brand-mark" aria-hidden="true">◒</span>
+
+        <span class="brand-text">
+          <strong>Privacy Policy</strong>
+          <span>Decoder</span>
+        </span>
+      </a>
+
+      <div class="header-badge">
+        Evidence-based analysis
+      </div>
+    </header>
+
+
+    <main>
+
+      <!-- =========================
+           HERO
+      ========================== -->
+
+      <section class="hero-section">
+
+        <div class="hero-copy">
+
+          <p class="eyebrow">
+            PRIVACY, WITHOUT THE LEGAL JARGON
+          </p>
+
+          <h1>
+            Understand what you're agreeing to.
+          </h1>
+
+          <p class="hero-description">
+            Paste a privacy policy and get a plain-English
+            privacy snapshot showing what data is collected,
+            who it may be shared with, how long it may be
+            retained, and what controls you have.
+          </p>
+
+        </div>
+
+        <div class="hero-note">
+          <span class="hero-note-icon" aria-hidden="true">✦</span>
+
+          <div>
+            <strong>Evidence first.</strong>
+            <p>
+              The AI extracts what the policy says.
+              Our transparent rubric calculates the result.
+            </p>
+          </div>
+        </div>
+
+      </section>
+
+
+      <!-- =========================
+           INPUT CARD
+      ========================== -->
+
+      <section
+        class="analyzer-section"
+        aria-labelledby="input-heading"
+      >
+
+        <div class="section-heading">
+          <div>
+            <p class="section-kicker">
+              STEP 01
+            </p>
+
+            <h2 id="input-heading">
+              Paste a privacy policy
+            </h2>
+          </div>
+
+          <span class="input-limit">
+            Up to 120,000 characters
+          </span>
+        </div>
+
+
+        <div class="input-card">
+
+          <label
+            for="policy-input"
+            class="sr-only"
+          >
+            Privacy policy text
+          </label>
+
+          <textarea
+            id="policy-input"
+            name="policy"
+            rows="16"
+            maxlength="120000"
+            placeholder="Paste the privacy policy text here..."
+            spellcheck="false"
+            autocomplete="off"
+          ></textarea>
+
+
+          <div class="input-toolbar">
+
+            <div
+              id="character-count"
+              class="character-count"
+              aria-live="polite"
+            >
+              0 / 120,000
+            </div>
+
+            <button
+              id="analyze-button"
+              class="primary-button"
+              type="button"
+            >
+              <span class="button-label">
+                Analyze Policy
+              </span>
+
+              <span
+                class="button-spinner"
+                aria-hidden="true"
+              ></span>
+            </button>
+
+          </div>
+
+        </div>
+
+
+        <div
+          id="input-error"
+          class="message message-error"
+          role="alert"
+          hidden
+        ></div>
+
+
+        <div class="privacy-note">
+
+          <span
+            class="privacy-note-icon"
+            aria-hidden="true"
+          >
+            ⓘ
+          </span>
+
+          <p>
+            This tool analyzes the text you provide and does
+            not store your policy in the application database.
+            Avoid pasting confidential or private documents.
+          </p>
+
+        </div>
+
+      </section>
+
+
+      <!-- =========================
+           LOADING STATE
+      ========================== -->
+
+      <section
+        id="loading-state"
+        class="loading-state"
+        aria-live="polite"
+        hidden
+      >
+
+        <div class="loading-orb" aria-hidden="true"></div>
+
+        <div>
+          <p class="loading-title">
+            Reading the policy...
+          </p>
+
+          <p class="loading-description">
+            Extracting privacy practices and preparing
+            your privacy snapshot.
+          </p>
+        </div>
+
+      </section>
+
+
+      <!-- =========================
+           RESULTS
+      ========================== -->
+
+      <section
+        id="results-section"
+        class="results-section"
+        aria-labelledby="results-heading"
+        hidden
+      >
+
+        <div class="results-header">
+
+          <div>
+            <p class="section-kicker">
+              STEP 02
+            </p>
+
+            <h2 id="results-heading">
+              Privacy Snapshot
+            </h2>
+
+            <p class="results-subtitle">
+              Based on the practices described in the
+              policy you provided.
+            </p>
+          </div>
+
+          <button
+            id="analyze-another-button"
+            class="secondary-button"
+            type="button"
+          >
+            Analyze another
+          </button>
+
+        </div>
+
+
+        <!-- =========================
+             GRADE
+        ========================== -->
+
+        <div class="snapshot-card">
+
+          <div class="grade-panel">
+
+            <p class="panel-label">
+              PRIVACY SNAPSHOT
+            </p>
+
+            <div
+              id="grade-badge"
+              class="grade-badge grade-default"
+              aria-label="Privacy grade"
+            >
+              <span id="grade-letter">
+                —
+              </span>
+            </div>
+
+            <p
+              id="grade-label"
+              class="grade-label"
+            >
+              —
+            </p>
+
+            <p
+              id="grade-reason"
+              class="grade-reason"
+            >
+              Based on the practices described
+              in the submitted policy.
+            </p>
+
+            <div class="score-display">
+              <strong id="risk-score">
+                0
+              </strong>
+
+              <span>
+                /
+              </span>
+
+              <span id="max-score">
+                42
+              </span>
+
+              <span>
+                risk points
+              </span>
+            </div>
+
+          </div>
+
+
+          <!-- =========================
+               SUMMARY
+          ========================== -->
+
+          <div class="summary-panel">
+
+            <div class="panel-heading">
+              <span class="panel-icon" aria-hidden="true">
+                ✦
+              </span>
+
+              <div>
+                <p class="panel-label">
+                  PLAIN-ENGLISH SUMMARY
+                </p>
+
+                <h3>
+                  What this policy tells you
+                </h3>
+              </div>
+            </div>
+
+            <ul
+              id="summary-list"
+              class="summary-list"
+            ></ul>
+
+          </div>
+
+        </div>
+
+
+        <!-- =========================
+             DIMENSIONS
+        ========================== -->
+
+        <section class="dimensions-section">
+
+          <div class="section-heading">
+            <div>
+              <p class="section-kicker">
+                PRIVACY DIMENSIONS
+              </p>
+
+              <h2>
+                What we found
+              </h2>
+            </div>
+          </div>
+
+          <div
+            id="dimensions-grid"
+            class="dimensions-grid"
+          ></div>
+
+        </section>
+
+
+        <!-- =========================
+             TOP CONCERNS
+        ========================== -->
+
+        <section class="concerns-section">
+
+          <div class="section-heading">
+            <div>
+              <p class="section-kicker">
+                KEY TAKEAWAYS
+              </p>
+
+              <h2>
+                Things you should know
+              </h2>
+            </div>
+          </div>
+
+          <div
+            id="concerns-list"
+            class="concerns-list"
+          ></div>
+
+        </section>
+
+
+        <!-- =========================
+             DISCLAIMER
+        ========================== -->
+
+        <div
+          id="results-disclaimer"
+          class="results-disclaimer"
+        >
+          This is an informational analysis based on the
+          policy text provided, not legal advice or a
+          determination of regulatory compliance.
+        </div>
+
+      </section>
+
+    </main>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer class="site-footer">
+
+      <div>
+        <strong>
+          Privacy Policy Decoder
+        </strong>
+
+        <span>
+          ·
+        </span>
+
+        <span>
+          Built for TLN Cybersecurity Challenge 2026
+        </span>
+      </div>
+
+      <p>
+        The goal is clarity, not legal advice.
+      </p>
+
+    </footer>
+
+  </div>
+
+
+  <!-- =========================
+       SCREEN READER LIVE REGION
+  ========================== -->
+
+  <div
+    id="live-region"
+    class="sr-only"
+    aria-live="polite"
+    aria-atomic="true"
+  ></div>
+
+
+  <script
+    type="module"
+    src="/app.js"
+  ></script>
+
+</body>
+</html>
