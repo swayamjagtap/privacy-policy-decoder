@@ -1,24 +1,23 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
 
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta
-    name="description"
-    content="Privacy Policy Decoder turns long privacy policies into a clear, evidence-based privacy snapshot."
-  />
+  <meta name="description"
+    content="Privacy Policy Decoder turns long privacy policies into a clear, evidence-backed privacy analysis with a transparent, deterministic score.">
 
   <title>Privacy Policy Decoder</title>
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    rel="stylesheet"
-    href="style.css"
-  />
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -30,12 +29,16 @@
     ========================== -->
 
     <header class="site-header">
-      <a
-        class="brand"
-        href="/"
-        aria-label="Privacy Policy Decoder home"
-      >
-        <span class="brand-mark" aria-hidden="true">◒</span>
+      <a class="brand" href="/" aria-label="Privacy Policy Decoder home">
+        <span class="brand-mark" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <path d="M10 1L3 5v6c0 4.4 3 7.5 7 9 4-1.5 7-4.6 7-9V5l-7-4z"
+              stroke="currentColor"
+              stroke-width="1.5"
+              fill="none" />
+            <circle cx="10" cy="10" r="2.5" fill="currentColor" />
+          </svg>
+        </span>
 
         <span class="brand-text">
           <strong>Privacy Policy</strong>
@@ -43,8 +46,10 @@
         </span>
       </a>
 
-      <div class="header-badge">
-        Evidence-based analysis
+      <div class="header-meta">
+        <span class="header-badge">
+          Evidence-backed analysis
+        </span>
       </div>
     </header>
 
@@ -64,28 +69,96 @@
           </p>
 
           <h1>
-            Understand what you're agreeing to.
+            Understand what<br>you're agreeing&nbsp;to.
           </h1>
 
           <p class="hero-description">
-            Paste a privacy policy and get a plain-English
-            privacy snapshot showing what data is collected,
-            who it may be shared with, how long it may be
-            retained, and what controls you have.
+            Paste a privacy policy and get a structured, evidence-backed
+            analysis showing what data is collected, who it may be shared
+            with, how long it may be retained, and what controls you have —
+            scored by a transparent, deterministic rubric.
           </p>
 
         </div>
 
-        <div class="hero-note">
-          <span class="hero-note-icon" aria-hidden="true">✦</span>
+      </section>
 
-          <div>
-            <strong>Evidence first.</strong>
-            <p>
-              The AI extracts what the policy says.
-              Our transparent rubric calculates the result.
-            </p>
+
+      <!-- =========================
+           HOW IT WORKS
+      ========================== -->
+
+      <section class="pipeline-section" aria-labelledby="pipeline-heading">
+
+        <h2 id="pipeline-heading" class="sr-only">
+          How it works
+        </h2>
+
+        <div class="pipeline-steps">
+
+          <div class="pipeline-step">
+            <div class="pipeline-step-number" aria-hidden="true">01</div>
+
+            <div class="pipeline-step-content">
+              <h3>You paste</h3>
+
+              <p>
+                The policy is processed for this analysis
+                and is not stored by this application.
+              </p>
+            </div>
           </div>
+
+
+          <div class="pipeline-connector" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <path d="M5 12h14m-6-6l6 6-6 6"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </div>
+
+
+          <div class="pipeline-step">
+            <div class="pipeline-step-number" aria-hidden="true">02</div>
+
+            <div class="pipeline-step-content">
+              <h3>AI extracts</h3>
+
+              <p>
+                Gemini reads the policy and extracts structured
+                findings across 7 privacy dimensions.
+              </p>
+            </div>
+          </div>
+
+
+          <div class="pipeline-connector" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <path d="M5 12h14m-6-6l6 6-6 6"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </div>
+
+
+          <div class="pipeline-step">
+            <div class="pipeline-step-number" aria-hidden="true">03</div>
+
+            <div class="pipeline-step-content">
+              <h3>Code scores</h3>
+
+              <p>
+                Our deterministic rubric converts findings
+                to weighted points. No AI opinion in the score.
+              </p>
+            </div>
+          </div>
+
         </div>
 
       </section>
@@ -95,15 +168,13 @@
            INPUT CARD
       ========================== -->
 
-      <section
-        class="analyzer-section"
-        aria-labelledby="input-heading"
-      >
+      <section class="analyzer-section" aria-labelledby="input-heading">
 
         <div class="section-heading">
+
           <div>
             <p class="section-kicker">
-              STEP 01
+              ANALYZE
             </p>
 
             <h2 id="input-heading">
@@ -111,18 +182,29 @@
             </h2>
           </div>
 
-          <span class="input-limit">
-            Up to 120,000 characters
-          </span>
+
+          <div class="input-actions">
+
+            <button
+              id="try-example-button"
+              class="ghost-button"
+              type="button"
+            >
+              Try a fictional example
+            </button>
+
+            <span class="input-limit">
+              Up to 120,000 characters
+            </span>
+
+          </div>
+
         </div>
 
 
         <div class="input-card">
 
-          <label
-            for="policy-input"
-            class="sr-only"
-          >
+          <label for="policy-input" class="sr-only">
             Privacy policy text
           </label>
 
@@ -131,7 +213,7 @@
             name="policy"
             rows="16"
             maxlength="120000"
-            placeholder="Paste the privacy policy text here..."
+            placeholder="Paste the full privacy policy text here..."
             spellcheck="false"
             autocomplete="off"
           ></textarea>
@@ -139,13 +221,25 @@
 
           <div class="input-toolbar">
 
-            <div
-              id="character-count"
-              class="character-count"
-              aria-live="polite"
-            >
-              0 / 120,000
+            <div class="input-toolbar-left">
+
+              <div
+                id="character-count"
+                class="character-count"
+                aria-live="polite"
+              >
+                0 / 120,000
+              </div>
+
+              <span
+                class="keyboard-hint"
+                aria-hidden="true"
+              >
+                Ctrl+Enter to analyze
+              </span>
+
             </div>
+
 
             <button
               id="analyze-button"
@@ -181,13 +275,28 @@
             class="privacy-note-icon"
             aria-hidden="true"
           >
-            ⓘ
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
+              <circle
+                cx="8"
+                cy="8"
+                r="7"
+                stroke="currentColor"
+                stroke-width="1.2"
+              />
+              <path
+                d="M8 7v4M8 5.5v0"
+                stroke="currentColor"
+                stroke-width="1.3"
+                stroke-linecap="round"
+              />
+            </svg>
           </span>
 
           <p>
-            This tool analyzes the text you provide and does
-            not store your policy in the application database.
-            Avoid pasting confidential or private documents.
+            This tool analyzes the text you provide. Policy text is
+            sent to Google Gemini for structured extraction and is
+            not stored by this application. Avoid pasting
+            confidential or private documents.
           </p>
 
         </div>
@@ -206,17 +315,29 @@
         hidden
       >
 
-        <div class="loading-orb" aria-hidden="true"></div>
+        <div
+          class="loading-indicator"
+          aria-hidden="true"
+        >
+          <div class="loading-ring"></div>
+        </div>
 
         <div>
-          <p class="loading-title">
-            Reading the policy...
+
+          <p
+            id="loading-title"
+            class="loading-title"
+          >
+            Reading your policy...
           </p>
 
-          <p class="loading-description">
-            Extracting privacy practices and preparing
-            your privacy snapshot.
+          <p
+            id="loading-description"
+            class="loading-description"
+          >
+            Your policy text has been sent for analysis.
           </p>
+
         </div>
 
       </section>
@@ -236,19 +357,22 @@
         <div class="results-header">
 
           <div>
+
             <p class="section-kicker">
-              STEP 02
+              ANALYSIS RESULTS
             </p>
 
             <h2 id="results-heading">
-              Privacy Snapshot
+              Privacy Analysis
             </h2>
 
             <p class="results-subtitle">
               Based on the practices described in the
               policy you provided.
             </p>
+
           </div>
+
 
           <button
             id="analyze-another-button"
@@ -262,93 +386,130 @@
 
 
         <!-- =========================
-             GRADE
+             GRADE + SCORE BREAKDOWN
         ========================== -->
 
-        <div class="snapshot-card">
+        <div class="report-card">
 
           <div class="grade-panel">
 
-            <p class="panel-label">
-              PRIVACY SNAPSHOT
-            </p>
+            <div class="grade-panel-inner">
 
-            <div
-              id="grade-badge"
-              class="grade-badge grade-default"
-              aria-label="Privacy grade"
-            >
-              <span id="grade-letter">
+              <p class="panel-label">
+                OVERALL GRADE
+              </p>
+
+
+              <div
+                id="grade-badge"
+                class="grade-badge grade-default"
+                role="img"
+                aria-label="Privacy grade"
+              >
+                <span id="grade-letter">
+                  —
+                </span>
+              </div>
+
+
+              <p
+                id="grade-label"
+                class="grade-label"
+              >
                 —
-              </span>
-            </div>
+              </p>
 
-            <p
-              id="grade-label"
-              class="grade-label"
-            >
-              —
-            </p>
 
-            <p
-              id="grade-reason"
-              class="grade-reason"
-            >
-              Based on the practices described
-              in the submitted policy.
-            </p>
+              <div class="score-display">
 
-            <div class="score-display">
-              <strong id="risk-score">
-                0
-              </strong>
+                <strong id="risk-score">
+                  0
+                </strong>
 
-              <span>
-                /
-              </span>
+                <span>
+                  /
+                </span>
 
-              <span id="max-score">
-                42
-              </span>
+                <span id="max-score">
+                  42
+                </span>
 
-              <span>
-                risk points
-              </span>
+                <span>
+                  concern points
+                </span>
+
+              </div>
+
+
+              <p
+                id="grade-reason"
+                class="grade-reason"
+              >
+                Based on the practices described
+                in the submitted policy.
+              </p>
+
             </div>
 
           </div>
 
 
-          <!-- =========================
-               SUMMARY
-          ========================== -->
-
-          <div class="summary-panel">
+          <div class="breakdown-panel">
 
             <div class="panel-heading">
-              <span class="panel-icon" aria-hidden="true">
-                ✦
-              </span>
 
-              <div>
-                <p class="panel-label">
-                  PLAIN-ENGLISH SUMMARY
-                </p>
+              <p class="panel-label">
+                SCORE BREAKDOWN
+              </p>
 
-                <h3>
-                  What this policy tells you
-                </h3>
-              </div>
+              <h3>
+                How the score was calculated
+              </h3>
+
             </div>
 
-            <ul
-              id="summary-list"
-              class="summary-list"
-            ></ul>
+
+            <div
+              id="score-breakdown"
+              class="score-breakdown"
+            ></div>
+
+
+            <p class="breakdown-note">
+              Each dimension is scored independently using a
+              deterministic rubric. Higher points = more concern.
+            </p>
 
           </div>
 
         </div>
+
+
+        <!-- =========================
+             SUMMARY
+        ========================== -->
+
+        <section class="summary-section">
+
+          <div class="panel-heading">
+
+            <p class="panel-label">
+              PLAIN-ENGLISH SUMMARY
+            </p>
+
+            <h3>
+              What this policy tells you
+            </h3>
+
+          </div>
+
+
+          <ul
+            id="summary-list"
+            class="summary-list"
+          ></ul>
+
+        </section>
 
 
         <!-- =========================
@@ -358,16 +519,21 @@
         <section class="dimensions-section">
 
           <div class="section-heading">
+
             <div>
+
               <p class="section-kicker">
                 PRIVACY DIMENSIONS
               </p>
 
               <h2>
-                What we found
+                Detailed findings
               </h2>
+
             </div>
+
           </div>
+
 
           <div
             id="dimensions-grid"
@@ -384,7 +550,9 @@
         <section class="concerns-section">
 
           <div class="section-heading">
+
             <div>
+
               <p class="section-kicker">
                 KEY TAKEAWAYS
               </p>
@@ -392,8 +560,11 @@
               <h2>
                 Things you should know
               </h2>
+
             </div>
+
           </div>
+
 
           <div
             id="concerns-list"
@@ -411,9 +582,12 @@
           id="results-disclaimer"
           class="results-disclaimer"
         >
+          <strong>Disclaimer:</strong>
           This is an informational analysis based on the
           policy text provided, not legal advice or a
-          determination of regulatory compliance.
+          determination of regulatory compliance. The grade
+          reflects a project-defined rubric, not an industry-standard
+          privacy score.
         </div>
 
       </section>
@@ -428,21 +602,27 @@
     <footer class="site-footer">
 
       <div>
+
         <strong>
           Privacy Policy Decoder
         </strong>
 
-        <span>
+        <span
+          class="footer-sep"
+          aria-hidden="true"
+        >
           ·
         </span>
 
         <span>
           Built for TLN Cybersecurity Challenge 2026
         </span>
+
       </div>
 
+
       <p>
-        The goal is clarity, not legal advice.
+        AI extracts the evidence. Code determines the score.
       </p>
 
     </footer>
@@ -462,10 +642,8 @@
   ></div>
 
 
-  <script
-    type="module"
-    src="/app.js"
-  ></script>
+  <script src="./app.js"></script>
 
 </body>
+
 </html>
